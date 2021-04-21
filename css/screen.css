@@ -407,6 +407,69 @@ a:focus {
     }
 }
 
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-header__nav {
+        display: block;
+    }
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    display: block;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: white;
+}
+
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+    color: white;
+}
+
+.is-active .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #DBEDFF;
+    text-shadow: 0px 0px 8px #8EC7FF;
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        gap: 32px;
+    }
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
