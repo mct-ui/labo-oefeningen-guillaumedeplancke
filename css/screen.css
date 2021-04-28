@@ -36,7 +36,7 @@ html {
     font-family: 'ClearSans', Helvetica, arial, sans-serif;
     font-weight: 200;
     color: white;
-    background-image: linear-gradient(to bottom right, #0A257D, #061649);
+    background-image: linear-gradient(to bottom right, #0a257d, #061649);
     background-attachment: fixed;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -57,13 +57,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #0053FB;
+    background: #0053fb;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #0053FB;
+    background: #0053fb;
     color: white;
     text-shadow: none;
 }
@@ -168,15 +168,15 @@ hr {
 }
 
 a {
-    color: #1195F7;
-    transition: all .1s ease-in-out;
+    color: #1195f7;
+    transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active,
 a:hover,
 a:focus {
-    color: #8EC7FF;
+    color: #8ec7ff;
 }
 
 /*------------------------------------*\
@@ -270,9 +270,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -459,15 +459,54 @@ a:focus {
 .is-active .c-nav__link,
 .c-nav__link:hover,
 .c-nav__link:focus {
-    color: #DBEDFF;
-    text-shadow: 0px 0px 8px #8EC7FF;
+    color: #dbedff;
+    text-shadow: 0px 0px 8px #8ec7ff;
 }
 
 @media (min-width: 768px) {
     .c-nav__list {
         display: flex;
         gap: 32px;
+        align-items: center;
     }
+}
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #dbedff;
+
+    border: 1px solid;
+    border-color: rgba(142, 199, 255, 0.1);
+
+    display: inline-block;
+    padding: 15px 25px;
+    background: linear-gradient(to right, #033aa7, #0053fb);
+    background-size: 150% auto;
+    box-shadow: 0px 0px 10px #1195ff;
+
+    transition: 0.5s;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #dbedff;
+}
+
+.c-link-cta:hover {
+    color: #dbedff;
+    background-position: right center;
 }
 
 /*------------------------------------*\
@@ -805,18 +844,18 @@ a:focus {
         text-decoration: underline;
     }
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
     }
     pre {
         white-space: pre-wrap !important;
