@@ -509,6 +509,33 @@ a:focus {
     background-position: right center;
 }
 
+.c-figure {
+    position: relative;
+}
+
+@media (max-width: 1224px) {
+    .c-figure__caption {
+        position: absolute;
+    
+        margin-top: 8px;
+        margin-right: 8px;
+        max-width: 260px;
+        top: 0;
+        right: 0;
+    
+        color: #474D59;
+        font-size: 12px;
+        line-height: 16px;
+    
+        border-style: solid;
+        border-color: #0053FB;
+        border-width: 0 4px 0 0;
+        
+        padding: 21px;
+        background-color: white;
+    }
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
